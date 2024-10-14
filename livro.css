@@ -19,11 +19,36 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(17, 37, 19, 0.856);
   position: sticky;
-  top: 0;
-  z-index: 10;
+  top: 0;/*se joga pra 0 a div do conheça o livro vai fica andando*/
+  z-index: 80;
 }
+.description{
+max-width: 800px;
+text-align: left;
+background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+padding: 2rem;
+border-radius: 8px;
+text-align: justify;
+}
+.description h5 {
+font-size: 2.5rem;
+color: #ffffff;
+margin-bottom: 1rem;
+}
+
+p {
+font-size: 1.2rem;
+color: #fff;
+margin-bottom: 1.5rem;
+}
+.benefits h5{
+  font-size: 2.5rem;
+color: #ffffff;
+margin-bottom: 1rem;
+}
+
 
 /* Logo no canto superior esquerdo */
 .logo img {
@@ -57,50 +82,72 @@ section {
 
 /* Parte 1: Descrição do produto */
 .product-info {
-  flex-direction: row;
+  display: flex;
   justify-content: space-between;
-  background-image: url('https://img.freepik.com/free-vector/background-abstract-line-digital-design-gradient-template_483537-2159.jpg?t=st=1728871691~exp=1728875291~hmac=faeca2354af11dd2e95d1652521d601e561521ada8b8ee74ed1c82cc4bcd2692&w=826');
-  padding: 3rem;
+  background-image: url('imagens/painel\ de\ fundo\ ebook1.jpg');
+  background-size: cover;
   border-radius: 10px; /* Adicionando bordas arredondadas */
 }
 
 .product-image img {
   width: 100%;
-  max-width: 400px;
+  max-width: 800px;
+  transform: rotate(2deg);/*rotação de imagem sempre deg*/
 }
 
 /* Parte 2: Vantagens e formulário */
 .purchase-info {
   flex-direction: row; /* Mantendo lado a lado */
   justify-content: space-between;
-  background-image: url('https://img.freepik.com/free-vector/green-color-background-gradient-modern-design-abstract_343694-2152.jpg?uid=R105096352&ga=GA1.1.1892331864.1717981368');
-  padding: 3rem;
-  border-radius: 10px; /* Adicionando bordas arredondadas */
+  background-image: url('imagens/painel\ de\ fundo\ 02.jpg');
+ ; /* Adicionando bordas arredondadas */
 }
 
 .benefits {
   width: 45%; /* Definindo a largura para alinhar com o formulário */
+  padding: 20px;
 }
 
 .benefits ul {
-  list-style: none;
+list-style:none;
+font-size: 1.2rem;
+color: #fff;
+margin-bottom: .6rem;
+width: 100%;
 }
 
 .purchase-form {
   width: 45%; /* Definindo a largura para alinhar com os benefícios */
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+padding: 2rem;
+border-radius: 10px;
+text-align: justify;
+font-size: 20px;
+
 }
 
 /* Parte 3: Avaliações */
 .reviews {
-  background-image: url('https://img.freepik.com/free-vector/gradient-background-wave-minimalist-style-design_483537-3860.jpg?uid=R105096352&ga=GA1.1.1892331864.1717981368');
+  background-image: url('imagens/painel\ de\ fundo\ 04.jpg');
   padding: 3rem;
-  border-radius: 10px; /* Adicionando bordas arredondadas */
+  background-size: cover;
+  border-radius: 0px; /* Adicionando bordas arredondadas */
+}
+.reviews h5{
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .review {
-  margin: 1rem 0;
+  margin: 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: justify;
 }
-
+.review img{
+  width: 93px;/*tamanho do perfil das avaliações*/
+}
 /* Botão */
 .cta-button {
   background-color: #238123;
@@ -142,8 +189,18 @@ input {
     max-width: 100%;
   }
 
+  .purchase-form {
+  width: 90%;
+  margin: 0 auto;
+  }
+
   .purchase-info {
     flex-direction: column; /* Mudando para coluna em telas menores */
     align-items: stretch; /* Alinhando o conteúdo para ocupar a largura total */
+  }
+
+  .benefits {
+    width: 90%; /* Definindo a largura para alinhar com o formulário */
+    padding: 20px;
   }
 }
