@@ -1,0 +1,140 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url('imagens/painel de fundo landing.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo do header */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: absolute;
+  top: -6%;
+  left: 0;
+}
+
+/* Logo no canto superior esquerdo */
+.logo img {
+  width: 200px;
+}
+
+/* Redes sociais no canto superior direito */
+.social-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-nav img {
+  width: 40px;
+  transition: transform 0.3s;
+}
+
+.social-nav img:hover {
+  transform: scale(1.1);
+}
+
+/* Conteúdo principal */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 3rem;
+  margin-right: 40%;
+  margin-left: 10%;
+}
+
+.text-content {
+  max-width: 600px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: justify;
+}
+
+h5 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+/* Botão */
+.cta-button {
+  background-color: #238123;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.cta-button:hover {
+  background-color: #1e701f;
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    background-image: url('imagens/painel\ de\ fundo\ landing\ p.jpg');
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    top: 0;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  h5 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: .8rem;
+    text-align: left;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 200px;
+  }
+
+  .main-content {
+    padding-top: 5rem;
+    margin-top: -10%;
+    width: 80%;
+  }
+}
